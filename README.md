@@ -11,8 +11,8 @@ Install the following packages using `apt`:
 
 Install the following packages manually:
 
-- [Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=760868)
-- [Google Chrome](https://www.google.com/chrome/)
+- [Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=760868 "Visual Studio Code")
+- [Google Chrome](https://www.google.com/chrome/ "Google Chrome")
 
 ## Miscellaneous
 
