@@ -18,9 +18,17 @@ Install the following packages manually:
 
 ### High CPU Bug
 
+The bug is present if you run `top` and find a `kworker` process consuming high CPU even when idle.
+
+Identify the `gpe` with the highest CPU usage.  Run this command
+
 ```sh
 # grep -r . /sys/firmware/acpi/interrupts/
 ```
+
+then locate the `gpe??` file which has the highest first column.
+
+Add the following `crontab` entry under `root`.  Change `gpe66` to the correct value acquired from the previous step.
 
 ```sh
 @reboot	echo "disable" > /sys/firmware/acpi/interrupts/gpe66
@@ -42,11 +50,11 @@ General behavior settings.
 
 #### Dock
 
-Go to **Settings** > **Dock** and set the **Icon Size** to `24`
+Go to *Settings* > *Dock* and set the **Icon Size** to `24`
 
 #### Terminal
 
-Open the **Preferences** window from **Edit** > **Edit Profile Preferences** and set the following values:
+Open the **Preferences** window from *Edit* > *Edit Profile Preferences* and set the following values:
 
 ##### General
 
@@ -60,34 +68,34 @@ Untick **Use colors from system theme** then click the **Text** box for `Default
 
 #### Gnome Tweak Tool
 
-Open the tool from the **Activities** menu and search for **tweak**
+Open the tool from the *Activities* menu using the `Super` key and search for `tweak`
 
 ##### Appearance
 
-Set **Applications** under **Themes** heading to `Arc`
+Set *Applications* under *Themes* heading to `Arc`
 
 ##### Desktop
 
-For **Icons on Desktop** heading, set the values to:
+For *Icons on Desktop* heading, set the values to:
 
-- `Show Icons` to **On**
-- `Home` to **Off**
-- `Network Servers` to **Off**
-- `Trash` to **On**
-- `Mounted Volumes` to **Off**
+- _Show Icons_ to **On**
+- _Home_ to **Off**
+- _Network Servers_ to **Off**
+- _Trash_ to **On**
+- _Mounted Volumes_ to **Off**
 
 ##### Fonts
 
 Set the following Values:
 
-- `Window Title` to `Lato Bold 10`
-- `Interface` to `Lato Regular 9`
-- `Document` to `Sans Regular 10`
-- `Monospace` to `Consolas Regular 10`
+- _Window Title_ to `Lato Bold 10`
+- _Interface_ to `Lato Regular 9`
+- _Document_ to `Sans Regular 10`
+- _Monospace_ to `Consolas Regular 10`
 
 ##### Keyboard & Mouse
 
-Set the `Overview Shortcut` to `Right Super`
+Set the **Overview Shortcut** to `Right Super`
 
 ##### Power
 
@@ -97,10 +105,10 @@ Enable the **Suspend when laptop lid is closed** option
 
 Set the following values:
 
-- **Application Menu** to **On**
-- **Battery Percentage** to **On**
-- **Date** under **Clock** to **On**
-- **Seconds** under **Clock** to **Off**
+- *Application Menu* to **On**
+- *Battery Percentage* to **On**
+- *Date* under **Clock** to **On**
+- *Seconds* under **Clock** to **Off**
 
 ##### Windows
 
@@ -108,4 +116,4 @@ Set the value for **Window Action Key** to `Super`
 
 ##### Workspaces
 
-Click **Static Workspaces** and set the `Number of Workspaces` to `3`
+Click _Static Workspaces_ and set the **Number of Workspaces** to `3`
