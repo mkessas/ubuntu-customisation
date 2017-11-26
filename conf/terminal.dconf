@@ -1,0 +1,13 @@
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(255,255,255)'
+visible-name='Awesome'
+default-size-columns=132
+default-size-rows=43
+use-system-font=false
+use-theme-colors=false
+font='Consolas 9'
+allow-bold=true
+background-color='rgb(32,32,32)'
+
+[legacy]
+schema-version=uint32 3

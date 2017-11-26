@@ -54,7 +54,11 @@ Go to *Settings* > *Dock* and set the **Icon Size** to `24`
 
 #### Terminal
 
-Open the **Preferences** window from *Edit* > *Edit Profile Preferences* and set the following values:
+Import the terminal configuration using `dconf`:
+
+```sh
+dconf load /org/gnome/terminal/ < conf/terminal.dconf
+```
 
 ##### General
 
