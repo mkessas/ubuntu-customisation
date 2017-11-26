@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Name=Postman
+# Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+# From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+GenericName=Postman
+# Gnome and KDE 3 uses Comment.
+Comment=REST API Client
+Exec=/usr/local/bin/postman %U
+Terminal=false
+Icon=postman
+Type=Application
+Categories=Network;
+MimeType=application/json;
+Actions=NewWindow;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=/usr/local/bin/postman

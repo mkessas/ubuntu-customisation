@@ -13,6 +13,7 @@ Install the following packages manually:
 
 - [Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=760868 "Visual Studio Code")
 - [Google Chrome](https://www.google.com/chrome/ "Google Chrome")
+- [Postman](https://app.getpostman.com/app/download/linux64 "Postman REST Client")
 
 ## Miscellaneous
 
@@ -43,6 +44,45 @@ Install the backgrounds in the `backgrounds/` directory by putting them in the `
 ### Fonts
 
 Copy the fonts in the `fonts/` directory to `/usr/local/share/fonts/` directory then run the `fc-cache -fv` command to reload the cache.
+
+### Icons
+
+Adding a new Ubuntu _Launcher_ application is a matter of adding a new `.desktop` file and the associated icon files.
+
+#### Adding .desktop file
+
+Create a new Launcher definition file and give it the `.desktop` extension, then place it in the `/usr/local/share/applications` directory.
+
+A typical example is as follows:
+
+```conf
+[Desktop Entry]
+Version=1.0
+Name=Postman
+GenericName=Postman
+Comment=REST API Client
+Exec=/usr/local/bin/postman %U
+Terminal=false
+Icon=postman
+Type=Application
+Categories=Network;
+MimeType=application/json;
+Actions=NewWindow;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=/usr/local/bin/postman
+```
+
+#### Adding Icon Files
+
+Add icons to the `/usr/share/icons/hicolor` directory.  For each color resolution, add a new file under the _resolution_/`apps` directory (eg: `512x512/apps`).
+
+Once this is done, reload the icon cache using:
+
+```sh
+$ sudo update-icon-caches /usr/share/icons/*
+```
 
 ### Behavior
 
